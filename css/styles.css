@@ -85,10 +85,12 @@ a:hover{
      margin-left: auto;
      margin-top: 7%;
      margin-bottom: 40px;
-     padding: 30px;
+     padding: 5em;
      background-color: #ecf0f1;
      outline: none;
      box-shadow: 10px 11px 24px -8px rgba(0,0,0,0.75);
      line-height:1.5;
      color:#34495e;
+     text-align: justify;
+     font-size: 1.2em;
 }
