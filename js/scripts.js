@@ -5,11 +5,13 @@ if(!localStorage.preferedLang){
     localStorage.preferedLang = defaultLang;
 }else{
     currentLang = localStorage.preferedLang == 'en' ? 'pl' : 'en';
+    translate();
 }
 function $(el){
     return document.querySelector(el);
 }
-$('.navbar__actions__translate').addEventListener('click', e => {
+$('.navbar__actions__translate').addEventListener('click', translate);
+function translate(){
      fadeIn($('.overlay'), () => {
     currentLang = currentLang == 'en' ? 'pl' : 'en';
     localStorage.preferedLang = currentLang;
@@ -23,7 +25,7 @@ $('.navbar__actions__translate').addEventListener('click', e => {
     $('.descryption').innerHTML = translation.descryption[currentLang];
     fadeOut($('.overlay'));  
      });
-})
+}
 const translation = {
     brand: {
         en: 'Template',
