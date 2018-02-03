@@ -1,0 +1,36 @@
+ body{
+     background: #455a64;
+     font-family: 'Roboto', sans-serif;
+}
+ h1,h2,h3,h4,h5,h6{
+     font-family: 'Montserrat', sans-serif;
+}
+a:hover{
+    text-decoration: underline;
+}
+ nav{
+     background: #FF5252;
+     color:white;
+}
+ .navbar__menu li{
+     border-bottom: 4px solid transparent;
+}
+ .navbar__menu li:hover{
+     border-bottom: 4px solid white;
+}
+ .navbar__actions i, .navbar__brand__menu{
+     border-radius: 50%;
+}
+ .navbar__actions i:hover, .navbar__brand__menu:hover{
+     background: white;
+     color:#455a64;
+}
+ .container{
+     background: white;
+     box-shadow: 10px 11px 24px -8px rgba(0,0,0,0.75);
+     color:#455a64;
+}
+
+.overlay{
+     background: #455a64; 
+}

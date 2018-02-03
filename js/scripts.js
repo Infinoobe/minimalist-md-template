@@ -11,16 +11,21 @@ function $(el){
     return document.querySelector(el);
 }
 $('.navbar__actions__translate').addEventListener('click', translate);
+[].forEach.call(document.querySelectorAll('.navbar__menu__link'), link => {
+link.addEventListener('click', changeTheme);
+});
+function changeTheme(e){
+        fadeIn($('.overlay'), () => {
+        let theme = e.target.dataset.theme;
+    $('.theme').setAttribute("href", `css/${theme}.css`);  
+    fadeOut($('.overlay'));  
+        });
+}
 function translate(){
      fadeIn($('.overlay'), () => {
     currentLang = currentLang == 'en' ? 'pl' : 'en';
     localStorage.preferedLang = currentLang;
     $('.navbar__brand__text').innerText = translation.brand[currentLang];
-    
-[].forEach.call(document.querySelectorAll('.navbar__menu li'), (li, i) => {
-  li.innerText = `${translation.menuItem[currentLang]} ${++i}`;
-});
-    
     $('.header').innerText = translation.header[currentLang];
     $('.descryption').innerHTML = translation.descryption[currentLang];
     fadeOut($('.overlay'));  
@@ -30,10 +35,6 @@ const translation = {
     brand: {
         en: 'Template',
         pl: 'Szablon'
-    },
-    menuItem: {
-        en: 'Item',
-        pl: 'Link'
     },
     header: {
         en: 'Minimalist material design template',
