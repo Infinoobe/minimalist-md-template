@@ -1,12 +1,18 @@
 document.body.innerHTML+= '<div class="overlay"></div>';
 const defaultLang = 'en';
 let currentLang = defaultLang;
+if(!localStorage.preferedLang){
+    localStorage.preferedLang = defaultLang;
+}else{
+    currentLang = localStorage.preferedLang == 'en' ? 'pl' : 'en';
+}
 function $(el){
     return document.querySelector(el);
 }
 $('.navbar__actions__translate').addEventListener('click', e => {
      fadeIn($('.overlay'), () => {
-           currentLang = currentLang == 'en' ? 'pl' : 'en';
+    currentLang = currentLang == 'en' ? 'pl' : 'en';
+    localStorage.preferedLang = currentLang;
     $('.navbar__brand__text').innerText = translation.brand[currentLang];
     
 [].forEach.call(document.querySelectorAll('.navbar__menu li'), (li, i) => {
