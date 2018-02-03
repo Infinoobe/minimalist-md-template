@@ -91,6 +91,20 @@ a:hover{
      box-shadow: 10px 11px 24px -8px rgba(0,0,0,0.75);
      line-height:1.5;
      color:#34495e;
-     text-align: justify;
      font-size: 1.2em;
+}
+.container p{
+     text-align: justify;
+}
+.overlay{
+    position: fixed;
+    top:0;
+    left:0;
+    width:100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    z-index: 999999999;
+     background: #34495e; 
+    display: none;
 }
