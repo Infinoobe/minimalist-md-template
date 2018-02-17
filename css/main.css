@@ -89,3 +89,6 @@ a{
     z-index: 999999999;
     display: none;
 }
+.bg{
+   background-color: #454545;
+}
