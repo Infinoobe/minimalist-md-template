@@ -17,8 +17,8 @@
             <span class="navbar__brand__text">Template</span>
          </div>
          <ul class="navbar__menu">
-            <li class="navbar__menu__link" data-theme="material">Transform</li>
-            <li class="navbar__menu__link" data-theme="flat">Transition</li>
+            <li class="navbar__menu__link" data-theme="material">RED</li>
+            <li class="navbar__menu__link" data-theme="flat">BLUE</li>
          </ul>
          <div class="navbar__actions">
              <i class="material-icons navbar__actions__translate">translate</i>
@@ -84,17 +84,9 @@ Aby transformacja nie była natychmiastowa, należy dodać transition, decyduje 
  background-color: #000000;<br />
  transition: 2s;<br />
 }<br />
-   Wynik:</p><br />
-  <div class="nazwaKlasy" style=".nazwaKlasy{
- width:100px;
- height:200px;
- background-color: #000000;
- transition: 2s;
-}
-
-.nazwaKlasy:hover{
- transform:scale(0.5, 0.75);
-}">
+             
+  <a class="wynik"> Wynik</a>
+             
   </div>            
 <p>Kolejną wartością transform jest rotate; kopjujemy poprzednie kroki usuwając niepotzebne elementy:<br />
 <br />
@@ -113,64 +105,32 @@ W hoverze, a dokładniej w transform wpisujemy rotate i nadajemy mu w wartości 
 .nazwaKlasy:hover{<br />
  transform:rotate(40deg);<br />
 }<br />
-   Wynik:</p>
-         <div class="nazwaKlasy4" style=".nazwaKlasy4{
- width:100px;
- height:200px;
- background-color: #000000;
- transition: 2s;
-}
-
-.nazwaKlasy:hover{
- transform:rotate(40deg);
-}">  </div>
+   
+     <a class="wynik"> Wynik</a>
+   
 <p>Kolejną interesującą transformacją jest skew, który zmienia pewnego rodzaju perspektywę zmienianego obiektu (w nim również zapisujemy deg):<br />
 <br />
 .nazwaKlasy:hover{<br />
  transform:skew(120deg);<br />
 }<br />
-            Wynik:</p>
-<div class="nazwaKlasy1" style=".nazwaKlasy1{
- width:100px;
- height:200px;
- background-color: #000000;
- transition: 2s;
-}
-
-.nazwaKlasy:hover{
- transform:skew(120deg);
-}">  </div>
+            <a class="wynik"> Wynik</a></p>
+  
 <p>Czasami stosowaną wartością jest również tranaslate, które zmienia nam oddalenie od rogów przeglądarki(x i y):<br />
 <br />
 .nazwaKlasy:hover{<br />
  transform:translate(60px, 50px);<br />
 }<br />
-   Wynik:</p>   
-<div class="nazwaKlasy2" style=".nazwaKlasy2{
- width:100px;
- height:200px;
- background-color: #000000;
- transition: 2s;
-}
-.nazwaKlasy:hover{
- transform:translate(60, 50);
-}
-"></div>
+   
+   <a class="wynik"> Wynik</a></p>   
+
 <p>Jako wisienkę na torcie mamy matrix funkcję do czysto artystycznego wykorzystania do niej wpisujemy 6 liczb decydujących o przekrzywieniu/formie:<br />
 <br />
 .nazwaKlasy:hover{<br />
  transform:matrix(0.789, 0.8643, 2, 0.876, 0.564, 0.5);<br />
 }
-   Wynik:</p>
-   <div class="nazwaKlasy3" style=".nazwaKlasy3{
- width:100px;
- height:200px;
- background-color: #000000;
- transition: 2s;
-}
-.nazwaKlasy:hover{
- transform:matrix(0.789, 0.8643, 2, 0.876, 0.564, 0.5);
-               }"></div>
+   
+   <a class="wynik"> Wynik</a></p>
+ 
 <p>na koniec krótkie przypomnienie wszelkich wartości transform:<br />
 scale - skaluje element<br />
 rotate - przekręca element<br />
