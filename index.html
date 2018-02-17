@@ -17,8 +17,8 @@
             <span class="navbar__brand__text">Template</span>
          </div>
          <ul class="navbar__menu">
-            <li class="navbar__menu__link" data-theme="material">Material Design</li>
-            <li class="navbar__menu__link" data-theme="flat">Flat UI</li>
+            <li class="navbar__menu__link" data-theme="material">Transform</li>
+            <li class="navbar__menu__link" data-theme="flat">Transition</li>
          </ul>
          <div class="navbar__actions">
              <i class="material-icons navbar__actions__translate">translate</i>
@@ -28,12 +28,160 @@
          </div>
       </nav>
       <div class="container">
-         <h1 class="header">Minimalist material design template</h1>
+         <h1 class="header">Transform</h1>
          <p class="descryption">
-             This is template created with &hearts; by <a href="http://micorix.me">micorix</a>. You can find code <a href="https://github.com/micorix/minimalist-md-template">here on Github</a>.
           </p>
           <p>
-           Samouczek: Jak zrobić trójkątny div w CSS
+           
+Zacznijmy od najprostszego: scale, czyli zmiana wielkości transformowanego diva/buttona/zdjęcia, ach wiecie o co chodzi.
+Oczywiście kod początkowy do zmienienia danego elementu powinien wyglądać tak:
+
+.nazwaKlasy{
+
+}
+
+.nazwaKlasy:hover{
+
+}
+
+lub
+
+#nazwaId{
+
+}
+
+#nazwaId:hover{
+
+}
+
+Aby zmienić wielkość najpier musimy ją nadać (dodajemy również kolor aby zobaczyć nasze wyniki):
+
+.nazwaKlasy{
+ width:100px;
+ height:200px;
+ background-color: #000000;
+}
+
+Następnie zdecydujmy jak mamy zmienić naszą wielkość bo można to zrobić na dwa sposoby:
+konkretna wielkość:
+
+.nazwaKlasy:hover{
+ width:178px;
+ height:267;
+}
+lub skala:
+
+.nazwaKlasy:hover{
+ transform:scale(0.5, 0.75);
+}
+gdzie tak jak w układzie współżędnych x (poziom) jest pierwszą wartością, a y (pion) jest drugą wartością.
+
+Aby transformacja nie była natychmiastowa, należy dodać transition, decyduje ono o trwaniu danej transformacji:
+
+.nazwaKlasy{
+ width:100px;
+ height:200px;
+ background-color: #000000;
+ transition: 2s;
+}
+   Wynik:</p>
+  <div style=".nazwaKlasy{
+ width:100px;
+ height:200px;
+ background-color: #000000;
+ transition: 2s;
+}
+
+.nazwaKlasy:hover{
+ transform:scale(0.5, 0.75);
+}">
+  </div>            
+<p>Kolejną wartością transform jest rotate; kopjujemy poprzednie kroki usuwając niepotzebne elementy:
+
+.nazwaKlasy{
+ width:100px;
+ height:200px;
+ background-color: #000000;
+ transition: 2s;
+}
+.nazwaKlasy:hover{
+ transform:;
+}
+
+W hoverze, a dokładniej w transform wpisujemy rotate i nadajemy mu w wartości kąt przekręcenia (gdzie deg to skrót od angielskiego tłumaczenia kąta-degrees):
+
+.nazwaKlasy:hover{
+ transform:rotate(40deg);
+}
+   Wynik:</p>
+         <div style=".nazwaKlasy{
+ width:100px;
+ height:200px;
+ background-color: #000000;
+ transition: 2s;
+}
+
+.nazwaKlasy:hover{
+ transform:rotate(40deg);
+}">  </div>
+<p>Kolejną interesującą transformacją jest skew, który zmienia pewnego rodzaju perspektywę zmienianego obiektu (w nim również zapisujemy deg):
+
+.nazwaKlasy:hover{
+ transform:skew(120deg);
+}
+            Wynik:</p>
+<div style=".nazwaKlasy{
+ width:100px;
+ height:200px;
+ background-color: #000000;
+ transition: 2s;
+}
+
+.nazwaKlasy:hover{
+ transform:skew(120deg);
+}">  </div>
+<p>Czasami stosowaną wartością jest również tranaslate, które zmienia nam oddalenie od rogów przeglądarki(x i y):
+
+.nazwaKlasy:hover{
+ transform:translate(60px, 50px);
+}
+   Wynik:</p>   
+<div style=".nazwaKlasy{
+ width:100px;
+ height:200px;
+ background-color: #000000;
+ transition: 2s;
+}
+.nazwaKlasy:hover{
+ transform:translate(60, 50);
+}
+"></div>
+<p>Jako wisienkę na torcie mamy matrix funkcję do czysto artystycznego wykorzystania do niej wpisujemy 6 liczb decydujących o przekrzywieniu:
+
+.nazwaKlasy:hover{
+ transform:matrix(0.789, 0.8643, 2, 0.876, 0.564, 0.5);
+}
+   Wynik:</p>
+   <div style=".nazwaKlasy{
+ width:100px;
+ height:200px;
+ background-color: #000000;
+ transition: 2s;
+}
+.nazwaKlasy:hover{
+ transform:matrix(0.789, 0.8643, 2, 0.876, 0.564, 0.5);
+               }"></div>
+<p>na koniec krótkie przypomnienie wszelkich wartości transform:
+scale - skaluje element
+rotate - przekręca element
+skew - nadaje perspektywę elementowi
+translate - przesuwa x i y elementu
+matrix - zmienia formę elementu przy pomocy 6 wartości
+
+Notatki:
+dla scale, rotate, skew oraz translate dodając na końcu wielkie x lub y (np. rotateX, scaleY itp.) sprawia, że zmieniamy jedynie x lub y w danej funkcji danego elementu
+
+dla wszystkich wartości oprócz skew można zrobić funkcję trójwymiarowości, a w przypadku skew znacznik zmienia nazwę na perspective, jednak dokładniejsze informacje podam jak nauczę sie pracy w 3D, w 3D pojawia się wtedy również wartość z
          </p>
          
       </div>
