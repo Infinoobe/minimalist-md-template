@@ -54,38 +54,38 @@ lub
 
 }
 
-Aby zmienić wielkość najpier musimy ją nadać (dodajemy również kolor aby zobaczyć nasze wyniki):
-
-.nazwaKlasy{
- width:100px;
- height:200px;
- background-color: #000000;
-}
-
-Następnie zdecydujmy jak mamy zmienić naszą wielkość bo można to zrobić na dwa sposoby:
-konkretna wielkość:
-
-.nazwaKlasy:hover{
- width:178px;
- height:267;
-}
-lub skala:
-
-.nazwaKlasy:hover{
- transform:scale(0.5, 0.75);
-}
-gdzie tak jak w układzie współżędnych x (poziom) jest pierwszą wartością, a y (pion) jest drugą wartością.
-
-Aby transformacja nie była natychmiastowa, należy dodać transition, decyduje ono o trwaniu danej transformacji:
-
-.nazwaKlasy{
- width:100px;
- height:200px;
- background-color: #000000;
- transition: 2s;
-}
-   Wynik:</p>
-  <div style=".nazwaKlasy{
+Aby zmienić wielkość najpier musimy ją nadać (dodajemy również kolor aby zobaczyć nasze wyniki):<br />
+<br />
+.nazwaKlasy{<br />
+ width:100px;<br />
+ height:200px;<br />
+ background-color: #000000;<br />
+}<br />
+<br />
+Następnie zdecydujmy jak mamy zmienić naszą wielkość bo można to zrobić na dwa sposoby:<br />
+konkretna wielkość:<br />
+<br />
+.nazwaKlasy:hover{<br />
+ width:178px;<br />
+ height:267;<br />
+}<br />
+lub skala:<br />
+<br />
+.nazwaKlasy:hover{<br />
+ transform:scale(0.5, 0.75);<br />
+}<br />
+gdzie tak jak w układzie współżędnych x (poziom) jest pierwszą wartością, a y (pion) jest drugą wartością.<br />
+<br />
+Aby transformacja nie była natychmiastowa, należy dodać transition, decyduje ono o trwaniu danej transformacji:<br />
+<br />
+.nazwaKlasy{<br />
+ width:100px;<br />
+ height:200px;<br />
+ background-color: #000000;<br />
+ transition: 2s;<br />
+}<br />
+   Wynik:</p><br />
+  <div class="nazwaKlasy" style=".nazwaKlasy{
  width:100px;
  height:200px;
  background-color: #000000;
@@ -96,25 +96,25 @@ Aby transformacja nie była natychmiastowa, należy dodać transition, decyduje 
  transform:scale(0.5, 0.75);
 }">
   </div>            
-<p>Kolejną wartością transform jest rotate; kopjujemy poprzednie kroki usuwając niepotzebne elementy:
-
-.nazwaKlasy{
- width:100px;
- height:200px;
- background-color: #000000;
- transition: 2s;
-}
-.nazwaKlasy:hover{
- transform:;
-}
-
-W hoverze, a dokładniej w transform wpisujemy rotate i nadajemy mu w wartości kąt przekręcenia (gdzie deg to skrót od angielskiego tłumaczenia kąta-degrees):
-
-.nazwaKlasy:hover{
- transform:rotate(40deg);
-}
+<p>Kolejną wartością transform jest rotate; kopjujemy poprzednie kroki usuwając niepotzebne elementy:<br />
+<br />
+.nazwaKlasy{<br />
+ width:100px;<br />
+ height:200px;<br />
+ background-color: #000000;<br />
+ transition: 2s;<br />
+}<br />
+.nazwaKlasy:hover{<br />
+ transform:;<br />
+}<br />
+<br />
+W hoverze, a dokładniej w transform wpisujemy rotate i nadajemy mu w wartości kąt przekręcenia (gdzie deg to skrót od angielskiego tłumaczenia kąta-degrees):<br />
+<br />
+.nazwaKlasy:hover{<br />
+ transform:rotate(40deg);<br />
+}<br />
    Wynik:</p>
-         <div style=".nazwaKlasy{
+         <div class="nazwaKlasy" style=".nazwaKlasy{
  width:100px;
  height:200px;
  background-color: #000000;
@@ -124,13 +124,13 @@ W hoverze, a dokładniej w transform wpisujemy rotate i nadajemy mu w wartości 
 .nazwaKlasy:hover{
  transform:rotate(40deg);
 }">  </div>
-<p>Kolejną interesującą transformacją jest skew, który zmienia pewnego rodzaju perspektywę zmienianego obiektu (w nim również zapisujemy deg):
-
-.nazwaKlasy:hover{
- transform:skew(120deg);
-}
+<p>Kolejną interesującą transformacją jest skew, który zmienia pewnego rodzaju perspektywę zmienianego obiektu (w nim również zapisujemy deg):<br />
+<br />
+.nazwaKlasy:hover{<br />
+ transform:skew(120deg);<br />
+}<br />
             Wynik:</p>
-<div style=".nazwaKlasy{
+<div class="nazwaKlasy" style=".nazwaKlasy{
  width:100px;
  height:200px;
  background-color: #000000;
@@ -140,13 +140,13 @@ W hoverze, a dokładniej w transform wpisujemy rotate i nadajemy mu w wartości 
 .nazwaKlasy:hover{
  transform:skew(120deg);
 }">  </div>
-<p>Czasami stosowaną wartością jest również tranaslate, które zmienia nam oddalenie od rogów przeglądarki(x i y):
-
-.nazwaKlasy:hover{
- transform:translate(60px, 50px);
-}
+<p>Czasami stosowaną wartością jest również tranaslate, które zmienia nam oddalenie od rogów przeglądarki(x i y):<br />
+<br />
+.nazwaKlasy:hover{<br />
+ transform:translate(60px, 50px);<br />
+}<br />
    Wynik:</p>   
-<div style=".nazwaKlasy{
+<div class="nazwaKlasy" style=".nazwaKlasy{
  width:100px;
  height:200px;
  background-color: #000000;
@@ -156,13 +156,13 @@ W hoverze, a dokładniej w transform wpisujemy rotate i nadajemy mu w wartości 
  transform:translate(60, 50);
 }
 "></div>
-<p>Jako wisienkę na torcie mamy matrix funkcję do czysto artystycznego wykorzystania do niej wpisujemy 6 liczb decydujących o przekrzywieniu:
-
-.nazwaKlasy:hover{
- transform:matrix(0.789, 0.8643, 2, 0.876, 0.564, 0.5);
+<p>Jako wisienkę na torcie mamy matrix funkcję do czysto artystycznego wykorzystania do niej wpisujemy 6 liczb decydujących o przekrzywieniu/formie:<br />
+<br />
+.nazwaKlasy:hover{<br />
+ transform:matrix(0.789, 0.8643, 2, 0.876, 0.564, 0.5);<br />
 }
    Wynik:</p>
-   <div style=".nazwaKlasy{
+   <div class="nazwaKlasy" style=".nazwaKlasy{
  width:100px;
  height:200px;
  background-color: #000000;
@@ -171,17 +171,17 @@ W hoverze, a dokładniej w transform wpisujemy rotate i nadajemy mu w wartości 
 .nazwaKlasy:hover{
  transform:matrix(0.789, 0.8643, 2, 0.876, 0.564, 0.5);
                }"></div>
-<p>na koniec krótkie przypomnienie wszelkich wartości transform:
-scale - skaluje element
-rotate - przekręca element
-skew - nadaje perspektywę elementowi
-translate - przesuwa x i y elementu
-matrix - zmienia formę elementu przy pomocy 6 wartości
+<p>na koniec krótkie przypomnienie wszelkich wartości transform:<br />
+scale - skaluje element<br />
+rotate - przekręca element<br />
+skew - nadaje perspektywę elementowi<br />
+translate - przesuwa x i y elementu<br />
+matrix - zmienia formę elementu przy pomocy 6 wartości<br />
 
-Notatki:
-dla scale, rotate, skew oraz translate dodając na końcu wielkie x lub y (np. rotateX, scaleY itp.) sprawia, że zmieniamy jedynie x lub y w danej funkcji danego elementu
-
-dla wszystkich wartości oprócz skew można zrobić funkcję trójwymiarowości, a w przypadku skew znacznik zmienia nazwę na perspective, jednak dokładniejsze informacje podam jak nauczę sie pracy w 3D, w 3D pojawia się wtedy również wartość z
+Notatki:<br />
+dla scale, rotate, skew oraz translate dodając na końcu wielkie x lub y (np. rotateX, scaleY itp.) sprawia, że zmieniamy jedynie x lub y w danej funkcji danego elementu<br />
+<br />
+dla wszystkich wartości oprócz skew można zrobić funkcję trójwymiarowości, a w przypadku skew znacznik zmienia nazwę na perspective, jednak dokładniejsze informacje podam jak nauczę sie pracy w 3D, w 3D pojawia się wtedy również wartość z<br />
          </p>
          
       </div>
