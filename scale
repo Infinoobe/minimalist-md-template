@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.nazwaKlasy{
+ width:100px;
+ height:200px;
+ background-color: #000000;
+ transition: 2s;
+}
+
+.nazwaKlasy:hover{
+ transform:scale(0.5, 0.75);
+}
+</style>
+</head>
+<body>
+ <center>
+  <div class="nazwaKlasy">
+  
+  </div>
+ </center>
+</body>
+
+</html>
